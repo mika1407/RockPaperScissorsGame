@@ -4,6 +4,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+     do
+     {
         Random random = new Random();
 
         int playerPoints=0;
@@ -99,6 +101,11 @@ internal class Program
         }
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine($"User get {playerPoints} points - Computer get {computerPoints} points");
+
+        Console.Write("Would you like to continue? (Y = yes, N = No): ");
+    } while (Console.ReadLine()!.ToUpper() == "Y");
+        
+        
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Thanks for playing!");
         Console.ResetColor();
